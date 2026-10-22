@@ -1,0 +1,4 @@
+# Copy to .dev.vars for local development with `wrangler dev`
+SELLAUTH_API_KEY=your-sellauth-api-key
+PAYCEK_API_KEY=your-paycek-api-key
+PAYCEK_API_SECRET=your-paycek-api-secret

@@ -1,0 +1,31 @@
+name = "sellauth-paycek"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+
+# ── Non-secret configuration (edit these) ────────────────────────────────────
+[vars]
+# Your SellAuth shop ID (dashboard URL: dash.sellauth.com/invoices/<id>?shopId=X)
+SELLAUTH_SHOP_ID = "123"
+
+# Where the buyer is sent back after paying — your SellAuth shop's public
+# checkout URL with the {unique_id} placeholder. Custom domain example:
+SELLAUTH_CHECKOUT_URL_TEMPLATE = "https://your-shop-domain.com/checkout/{unique_id}"
+
+# The Paycek profile the payments are opened under (settlement currency: EUR)
+PAYCEK_PROFILE_CODE = "your-profile-code"
+
+# Public HTTPS URL of this worker (used to build Paycek callback URLs)
+PUBLIC_BASE_URL = "https://sellauth-paycek.your-subdomain.workers.dev"
+
+# Minutes the buyer has to broadcast the transaction (Paycek allows 2–15)
+# PAYCEK_CONFIRM_MINUTES = "15"
+
+# Paycek profiles settle in EUR. If your shop currency is NOT EUR, set a fixed
+# USD→EUR rate and the worker will charge price_usd × rate instead.
+# USD_TO_EUR = "0.92"
+
+# ── Secrets (entered in the deploy flow from .dev.vars.example, or via ────────
+# `wrangler secret put …`) — never commit real values:
+# SELLAUTH_API_KEY   – SellAuth: dash.sellauth.com → Account → Developers
+# PAYCEK_API_KEY     – Paycek: account settings
+# PAYCEK_API_SECRET  – Paycek: account settings
