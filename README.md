@@ -1,5 +1,9 @@
 # SellAuth ⇄ Paycek bridge (Cloudflare Worker)
 
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/legacyipadteen/sellauth-paycek)
+
+**[One-click deploy link](https://deploy.workers.cloudflare.com/?url=https://github.com/legacyipadteen/sellauth-paycek)** — clones this repo into your GitHub, asks for the three secrets (from `.dev.vars.example`), shows the vars from `wrangler.toml` to edit, and deploys.
+
 Lets a [SellAuth](https://sellauth.com) shop accept crypto payments through
 [Paycek](https://paycek.io) (Electrocoin) using SellAuth **custom payment
 methods**, with no server of your own — everything runs on a Cloudflare
